@@ -75,9 +75,15 @@ WSGI_APPLICATION = 'SLMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+from dotenv import load_dotenv
+
+env=load_dotenv()
+
+name=os.getenv('NAME')
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': name,
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
