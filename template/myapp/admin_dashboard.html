@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Hii {{request.user.username}}</h1>
+        <div>
+            <a href="{% url 'view_leave' %}">View Leave Requests</a>
+            <a id="lo" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+    <div class="dashboard">
+        <h2 class="dashboard-title">Admin Dashboard</h2>
+        <div class="card-container">
+            <div class="card">
+                <h2>Leave Management</h2>
+                <p>Manage and review all staff leave applications in one place.</p>
+                <a href="{% url 'admin_leave_management' %}">Manage</a>
+            </div>
+            <div class="card">
+                <h2>Staff Management</h2>
+                <p>View, manage, and control registered staff user accounts.</p>
+                <a href="{% url 'manage_staff' %}">Manage</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

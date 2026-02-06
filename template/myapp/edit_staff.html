@@ -1,0 +1,411 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staff</title>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --card-color: rgba(255, 255, 255, 0.08);
+            --text-color: #e5e7eb;
+            --muted-text: #94a3b8;
+            --accent: #7dd3fc;
+            --accent-2: #a78bfa;
+            --danger: #f87171;
+            --success: #4ade80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--surface-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .navbar a {
+            color: var(--muted-text);
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .navbar a:hover {
+            color: var(--accent);
+        }
+
+        /* Page */
+        .page {
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Cards Grid */
+        .staff-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .staff-card {
+            background: var(--card-color);
+            backdrop-filter: blur(14px);
+            border-radius: 18px;
+            padding: 1.8rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Avatar */
+        .avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #020617;
+            margin-bottom: 1rem;
+        }
+
+        .staff-name {
+            font-size: 1.1rem;
+            color: var(--accent-2);
+            margin-bottom: 0.3rem;
+        }
+
+        .staff-id {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1.4rem;
+        }
+
+        /* Buttons */
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .edit-btn,
+        .delete-btn {
+            border: none;
+            padding: 0.45rem 1.2rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .edit-btn {
+            background-color: var(--success);
+            color: #022c22;
+        }
+
+        .delete-btn {
+            background-color: var(--danger);
+            color: #450a0a;
+        }
+
+        .edit-btn:hover,
+        .delete-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .card-actions {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Techify Admin</h1>
+        <div>
+            <a href="#">Dashboard</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 class="page-title">Manage Staff</h2>
+
+        <div class="staff-grid">
+
+            <div class="staff-card">
+                <div class="avatar">E</div>
+                <div class="staff-name">Emily Blunt</div>
+                <div class="staff-id">Staff ID: 101</div>
+
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+       ss="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="avatar">D</div>
+                <div class="staff-name">Daniel Craig</div>
+                <div class="staff-id">Staff ID: 116</div>
+
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="avatar">R</div>
+                <div class="staff-name">Richard Briers</div>
+                <div class="staff-id">Staff ID: 102</div>
+
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="avatar">K</div>
+                <div class="staff-name">Kelly Brook</div>
+                <div class="staff-id">Staff ID: 105</div>
+
+                <div class="card-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Staff</title>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --card-color: rgba(255, 255, 255, 0.08);
+            --text-color: #e5e7eb;
+            --muted-text: #94a3b8;
+            --accent: #7dd3fc;
+            --accent-2: #a78bfa;
+            --success: #4ade80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: var(--surface-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .navbar a {
+            color: var(--muted-text);
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .navbar a:hover {
+            color: var(--accent);
+        }
+        #lo{
+            padding: 10px;
+            background-color: rgba(255, 255, 255,0.2);
+            border: 1px solid #7dd3fc;
+            color: whitesmoke;
+        }
+        .page {
+            padding: 3rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .form-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-color);
+            backdrop-filter: blur(14px);
+            padding: 2.5rem;
+            border-radius: 18px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+        }
+
+        .form-card h2 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            color: var(--muted-text);
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: rgba(255,255,255,0.12);
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        input::placeholder {
+            color: #cbd5f5;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        button {
+            padding: 0.6rem 1.8rem;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #020617;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .cancel-btn {
+            background: transparent;
+            color: var(--muted-text);
+            border: 0px solid var(--muted-text);
+        }
+
+        .cancel-btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Techify Admin</h1>
+        <div>
+            <a href="{% url 'manage_staff' %}">Back</a>
+            <a  id='lo' href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="form-card">
+            <h2>Edit Staff</h2>
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input 
+                        type="text" 
+                        name="username" 
+                        value="{{ user.username }}" 
+                        required>
+                        <br><br>
+                    <label>Password</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="Keep blank if no changes ">
+                </div>
+
+                <div class="btn-group">
+                    <a href="{% url 'manage_staff' %}" class="cancel-btn"><button>Cancel</button></a>
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

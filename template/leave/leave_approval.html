@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Leave Requests</title>
+    <link rel="stylesheet" href="{% static 'css/leave_approval.css' %}">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Techify Admin</h1>
+        <div>
+            <a href="{% url 'admin_dashboard' %}">Dashboard</a>
+            <a id="lo" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 class="page-title">Leave Approval Requests</h2>
+
+        <div class="card-container">
+    {% for leave in leaves %}
+            <div class="leave-card">
+                <h3>{{leave.user.username}}</h3>
+                <p>Leave Type: <span>{{leave.leave_type}}</span></p>
+                <p>Start Date: <span>{{leave.start_date}}</span></p>
+                <p>End Date: <span>{{leave.end_date}}</span></p>
+                {% if leave.status == 'Pending' %}
+                <div class="action-buttons">
+                    <a href="{% url 'approve_leave' leave.id %}"><button class="approved-btn">Approve</button></a>
+                    <a href="{% url 'reject_leave' leave.id %}"><button class="rejected-btn">Reject</button></a>
+                </div>
+                {% else %}
+                <div class=""><br>
+                    <button class="{{leave.status|lower}}-btn">{{leave.status|upper}}</button>
+                </div>
+                {% endif %}
+            </div>
+    {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

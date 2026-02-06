@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(14, 29, 90), #e9d5ff);
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 400px;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+input {
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1e293b;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1e293b;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    width: 120px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #5eead4, #38bdf8);
+    color: #020617;
+    font-weight: 500;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(124deg, rgb(135, 135, 227), rgb(236, 129, 129));
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    outline: none;  
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    border: 2px solid transparent;
+    background-color: rgba(245, 245, 245, 0.3);
+    border-radius: 10px;
+}
+input{
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+button{
+	padding: 10px;
+	font-size: 15px;
+	width: 100px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	background-color: lightgreen;
+}
+select{
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 79%;
+} */

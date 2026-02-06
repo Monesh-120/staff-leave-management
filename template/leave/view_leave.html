@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Leave Status | Techify</title>
+    <link rel="stylesheet" href="{% static 'css/view_leave.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Techify</div>
+        <a href="{% url 'user_dashboard' %}" class="back-btn">Return Back</a>
+    </nav>
+    <h2 class="page-title">My Leave Requests</h2>
+    <div class="leave-container">
+        {% for leave in leaves %}
+        <div class="leave-card">
+            <div class="leave-info">
+                <h3>{{leave.leave_type}}</h3>
+                <p>📅 {{leave.start_date}} To {{leave.end_date}}</p>
+                <p>📝 Reason: {{leave.reason}}</p>
+            </div>
+            <span class="status {{ leave.status|lower }}">{{leave.status|upper}}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

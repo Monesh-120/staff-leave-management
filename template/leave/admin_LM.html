@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Requests</title>
+    <link rel="stylesheet" href="{% static 'css/admin_LM.css' %}">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Techify</div>
+        <a href="{% url 'admin_dashboard' %}"><button class="back-btn">Return Back</button></a>
+    </div>
+
+    <div class="page">
+
+        <div class="summary">
+            <div class="summary-card blue">
+                <h2>{{count_}}</h2>
+                <p>Total Leave Applications</p>
+            </div>
+
+            <div class="summary-card green">
+                <h2>{{approved}}</h2>
+                <p>Approved Leaves</p>
+            </div>
+
+            <div class="summary-card red">
+                <h2>{{rejected}}</h2>
+                <p>Rejected Leaves</p>
+            </div>
+
+            <a style="text-decoration: none;" href="{% url 'view_leave' %}">
+                <div class="summary-card orange">
+                    <h2>{{pending}}</h2>
+                    <p>View Pending Requests</p>
+                </div>
+            </a>
+        </div>
+        <div class="leave-history">
+            <h2>Leave History</h2>
+
+            <!-- <div class="filters">
+                <div class="tabs">
+                    <span class="active">Approved</span>
+                    <span>Pending</span>
+                    <span>Rejected</span>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div> -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Leave Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Duration</th>
+                        <th>Reason</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for leave in leaves %}
+                    <tr>
+                        <td>{{leave.user.username}}</td>
+                        <td>{{leave.leave_type}}</td>
+                        <td>{{leave.start_date}}</td>
+                        <td>{{leave.end_date}}</td>
+                        <td>6 Days</td>
+                        <td>{{leave.reason}}</td>
+                        <td class="status {{leave.status|lower}}">{{leave.status}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+:root {
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --card-color: rgba(255, 255, 255, 0.08);
+    --text-color: #e5e7eb;
+    --muted-text: #94a3b8;
+    --accent: #7dd3fc;
+    --accent-2: #a78bfa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    /* background: #f4f6fb; */
+    background-color: var(--bg-color);
+}
+.navbar {
+    /* background: #111827; */
+    background-color: var(--surface-color);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid #7dd3fc;
+}
+.page-title {
+    margin: 30px;
+    font-size: 24px;
+    color: #111827;
+}
+.leave-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 0 30px 40px;
+}
+
+.leave-card {
+    background: rgb(217, 238, 245);
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    
+}
+
+.leave-card:hover {
+    transform: translateY(-5px);
+}
+
+.leave-info h3 {
+    margin-bottom: 6px;
+    color: #111827;
+}
+.leave-info p {
+    font-size: 17px;
+    color: #6b7280;
+    font-weight: 500;
+}
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.approved {
+    background: #b6e1c5;
+    color: #0d5b2b;
+}
+
+.rejected {
+    background: #eabfbf;
+    color: #991b1b;
+}
+
+.pending {
+    background: #e9e4aa;
+    /* color: #54270a; */
+     
+    color: #4a4404;
+}

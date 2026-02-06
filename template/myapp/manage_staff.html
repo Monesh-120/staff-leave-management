@@ -1,0 +1,38 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Staff</title>
+    <link rel="stylesheet" href="{% static 'css/manage_staff.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Techify Admin</h1>
+      <div>
+        <a id="db" href="{% url 'admin_dashboard' %}">Dashboard</a>
+        <a id="cu" href="{% url 'add_staff' %}">Create User</a>
+        <a id="lo" href="{% url 'logout' %}">Logout</a>
+      </div>
+    </div>
+    <div class="page">
+      <h2 class="page-title">Manage Staff</h2>
+      <div class="staff-grid">
+        {% for staff in staff_list %}
+        <div class="staff-card">
+          
+          <div class="avatar">{{staff.username|first|upper}}</div>
+          <div class="staff-name">{{staff.username}}</div>
+          <div class="staff-id">Staff ID: {{staff.id}}</div>
+          <div class="card-actions">
+            <a href="{% url 'edit_staff' staff.id %}"><button class="edit-btn">Edit</button></a>
+            <a href="{% url 'delete_staff' staff.id %}" onclick="return confirm('Are yoy sure?');"
+              ><button class="delete-btn">Delete</button></a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+:root {
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --card-color: rgba(255, 255, 255, 0.08);
+    --text-color: #e5e7eb;
+    --muted-text: #94a3b8;
+    --accent: #7dd3fc;
+    --accent-2: #a78bfa;
+    --success: #4ade80;
+    --danger: #f87171;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--surface-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.navbar a {
+    color: var(--muted-text);
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+.page {
+    padding: 3rem 2rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+}
+
+.card-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#lo {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border: 1px solid #7dd3fc;
+}
+
+.leave-card {
+    background: var(--card-color);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.leave-card:hover {
+    transform: translateY(-6px);
+}
+
+.leave-card h3 {
+    color: var(--accent-2);
+    margin-bottom: 0.5rem;
+}
+
+.leave-card p {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    margin-bottom: 0.4rem;
+}
+
+.leave-card span {
+    color: var(--text-color);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.approved-btn,
+.rejected-btn {
+    border: none;
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.approved-btn {
+    background-color: var(--success);
+    color: #022c22;
+}
+
+.rejected-btn {
+    background-color: var(--danger);
+    color: #450a0a;
+}
+
+.approved-btn:hover,
+.rejected-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

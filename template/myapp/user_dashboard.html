@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/user_dashboard.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Techify</h1>
+        <div>
+            <!-- <a href="#">Dashboard</a> -->
+            <a id="lo" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+    <div class="dashboard">
+        <h2 class="welcome-text">
+            Welcome 🙏 {{ request.user.username }}
+        </h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Apply Leave</h3>
+                <p>Submit a new leave request for approval.</p>
+                <a href="{% url 'apply_leave' %}">Apply</a>
+            </div>
+            <div class="card">
+                <h3>My Leave Requests</h3>
+                <p>View the status of your submitted leave applications.</p>
+                <a href="{% url 'my_leaves' %}">View</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome🙏{{request.user.username}}</h1>
+    <div class="">
+        <h3>Apply leave</h3>
+        <p>submit a new leave request</p>
+        <a href="#">Apply</a>
+    </div>
+    <div class="">
+        <h3>my leave request</h3>
+        <p>View your leave application status</p>
+        <a href="#">View</a>
+    </div>
+</body>
+</html> -->
